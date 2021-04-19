@@ -1,7 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
 
-import estilos, { OlhoDireito } from './estilos';
+import { Tela, Orelhas, Olhos, OlhoDireito, Bochechas } from './estilos';
 import Orelha from './Orelha';
 import Olho from './Olho';
 import Nariz from './Nariz';
@@ -9,20 +8,20 @@ import Bochecha from './Bochecha';
 import Boca from './Boca';
 
 export default function Pikachu() {
-    return <View style={estilos.tela}>
-        <View style={estilos.orelhas}>
+    return <Tela>
+        <Orelhas>
             <Orelha />
             <Orelha direita />
-        </View>
-        <View style={estilos.olhos}>
+        </Orelhas>
+        <Olhos>
             <Olho />
             <OlhoDireito />
-        </View>
+        </Olhos>
         <Nariz />
-        <View style={estilos.bochechas}>
+        <Bochechas>
             <Bochecha />
             <Bochecha />
-        </View>
+        </Bochechas>
         <Boca />
-    </View>
+    </Tela>
 }

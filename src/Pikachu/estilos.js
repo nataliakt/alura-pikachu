@@ -1,38 +1,38 @@
-import { StyleSheet } from 'react-native';
 import styled from 'styled-components';
 
 import Olho from './Olho';
+
+export const Tela = styled.View`
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FCD458;
+`;
+
+export const Orelhas = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 350px;
+`;
+
+export const Olhos = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 200px;
+
+    margin-top: 30px;
+`;
 
 export const OlhoDireito = styled(Olho)`
     transform: scaleX(-1);
 `;
 
-export default StyleSheet.create({
-    tela: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+export const Bochechas = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
 
-        backgroundColor: "#FCD458",
-    },
-    orelhas: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-
-        width: 350,
-    },
-    olhos: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-
-        width: 200,
-
-        marginTop: 30,
-    },
-    bochechas: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-
-        width: 340,
-    }
-});
+    width: 340px;
+`;
