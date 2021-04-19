@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import estilos from './estilos';
+import estilos, { OlhoDireito } from './estilos';
 import Orelha from './Orelha';
 import Olho from './Olho';
 import Nariz from './Nariz';
@@ -16,7 +16,7 @@ export default function Pikachu() {
         </View>
         <View style={estilos.olhos}>
             <Olho />
-            <Olho estilosExtra={estilos.olhoDireito} />
+            <OlhoDireito />
         </View>
         <Nariz />
         <View style={estilos.bochechas}>

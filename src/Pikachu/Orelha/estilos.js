@@ -1,34 +1,31 @@
-import { StyleSheet } from 'react-native';
+import styled from 'styled-components';
 
-export default function (direita) {
-    return StyleSheet.create({
-        orelha: {
-            transform: [{scaleX: direita ? -1 : 1 }, {rotate: "-5deg"}]
-        },
-        ponta: {
-            width: 0,
-            height: 0,
+export const OrelhaExterna = styled.View`
+    transform: rotate(-5deg) scaleX( ${({direita}) => direita ? -1 : 1 })
+`;
 
-            backgroundColor: "transparent",
+export const Ponta = styled.View`
+    width: 0;
+    height: 0;
 
-            borderStyle: "solid",
-            borderRightWidth: 120,
-            borderTopWidth: 75,
-            borderRightColor: "transparent",
-            borderTopColor: "#000200",
+    backgroundColor: transparent;
 
-            transform: [{rotate: "270deg"}]
-        },
-        marca: {
-            width: 135,
-            height: 135,
+    border-style: solid;
+    border-right-width: 120px;
+    border-top-width: 75px;
+    border-right-color: transparent;
+    border-top-color: #000200;
 
-            marginTop: -50,
-            marginLeft: 23,
+    transform: rotate(270deg);
+`;
 
-            backgroundColor: "#FCD458",
+export const Marca = styled.View`
+    width: 135px;
+    height: 135px;
 
-            borderRadius: 77,
-        }
-    });
-}
+    margin: -50px 0 0 23px;
+
+    background-color: #FCD458;
+
+    border-radius: 77px;
+`;
